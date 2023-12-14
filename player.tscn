@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnb47ovpuhm4r"]
+
+[ext_resource type="Script" path="res://zack-godot-platformer/player.gd" id="1_hdxhj"]
+[ext_resource type="Texture2D" uid="uid://btq74nk6ic4ec" path="res://zack-godot-platformer/icon.svg" id="1_nmvlo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_665pr"]
+size = Vector2(127, 128)
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_hdxhj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_665pr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nmvlo")

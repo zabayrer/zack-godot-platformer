@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://txhfd6sdl48t"]
+[gd_scene load_steps=2 format=3 uid="uid://txhfd6sdl48t"]
+
+[ext_resource type="PackedScene" uid="uid://bnb47ovpuhm4r" path="res://zack-godot-platformer/player.tscn" id="1_vlce8"]
 
 [node name="main" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_vlce8")]
+position = Vector2(160, 136)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(32, 0, 32, 504, 112, 504, 248, 576, 448, 576, 448, 512, 640, 384, 640, 576, 704, 576, 704, 384, 912, 464, 912, 600, 1136, 600, 1136, 0, 1176, 0, 1176, 792, -64, 792, -64, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+polygon = PackedVector2Array(248, 576, 448, 576, 448, 512, 640, 384, 640, 576, 704, 576, 704, 384, 912, 464, 912, 600, 1136, 600, 1136, 0, 1176, 0, 1176, 792, -64, 792, -64, 0, 32, 0, 32, 504, 112, 504)
